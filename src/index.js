@@ -55,12 +55,18 @@ const powerFactory = () =>{
 doMultipleTimes(powerFactory(),10);
 doMultipleTimes(powerFactory(),10);
 
+// Create one execution context for powerFactory
 let pf1 = powerFactory();
+// Invoking pf1 calls the function returned by powerFactory with the context created on line 59
+// Each call to pf1() prints out the next power of 2
 console.log(pf1());
 console.log(pf1());
 console.log(pf1());
 
+// Create a second execution context for powerFactory
 let pf2 = powerFactory();
+// Invoking pf2 calls the function returned by powerFactory with the context created on line 67
+// Each call to pf2() prints out the next power of 2 within pf2's context
 console.log(pf2());
 
 
